@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+
+    </style>
+    <script>
+        function noisy(f){
+            return function (arg) {
+                console.log('calling with', arg);
+                var val=f(arg);
+                console.log('called with', arg, '-got', val);
+                //return val;
+            };
+        };
+
+        noisy(Boolean)(3);
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
