@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+
+    </style>
+    <script>
+        var protoRabbit={
+            speak: function (line) {
+                console.log('The ' + this.type + ' rabbits says "'+ line + '"');
+            }
+        };
+
+        var killerRabbits=Object.create(protoRabbit);
+        killerRabbits.type='killer';
+        killerRabbits.speak('SKREEE!');
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
