@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+
+    </style>
+    <script>
+        function rowHeights(row) {
+            return rows.map(function (row) {
+                return row.reduce(function (max, cell) {
+                    return Math.max(max, cell.minHeight());
+                },0);
+            });
+        }
+
+        function codWidth(rows) {
+            return row[0].map(function (_, i) {
+                return rows.reduce(function(max, row){
+                    return Math.max(max, row[i].minWidth());
+                }, 0);
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+</html>
